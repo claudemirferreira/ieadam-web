@@ -1,3 +1,4 @@
+import { RelatorioService } from './services/relatorio.service';
 import { DialogService } from './dialog.service';
 import { SharedService } from './services/shared.service';
 import { UserService } from './services/user/user.service';
@@ -23,6 +24,7 @@ import { TicketListComponent } from './components/ticket-list/ticket-list.compon
 import { TicketService } from './services/ticket/ticket.service';
 import { TicketDetailComponent } from './components/ticket-detail/ticket-detail.component';
 import { SummaryComponent } from './components/summary/summary.component';
+import { DebitoFinanceiroComponent } from './components/relatorio/debito-financeiro/debito-financeiro.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +40,7 @@ import { SummaryComponent } from './components/summary/summary.component';
     TicketListComponent,
     TicketDetailComponent,
     SummaryComponent,
+    DebitoFinanceiroComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,6 +55,7 @@ import { SummaryComponent } from './components/summary/summary.component';
     SharedService,
     DialogService,
     TicketService,
+    RelatorioService,
     { provide: HTTP_INTERCEPTORS,
       useClass: AuthInterceptor,
       multi: true

@@ -10,6 +10,8 @@ import { UserListComponent } from './components/user-list/user-list.component';
 import { TicketNewComponent } from './components/ticket-new/ticket-new.component';
 import { TicketListComponent } from './components/ticket-list/ticket-list.component';
 import { SummaryComponent } from './components/summary/summary.component';
+import { DebitoFinanceiroComponent } from './components/relatorio/debito-financeiro/debito-financeiro.component';
+
 
 export const ROUTES: Routes = [
   { path: 'login' , component: LoginComponent },
@@ -21,7 +23,8 @@ export const ROUTES: Routes = [
   { path: 'ticket-new/:id' , component: TicketNewComponent, canActivate: [AuthGuard] },
   { path: 'ticket-list' , component: TicketListComponent, canActivate: [AuthGuard] },
   { path: 'ticket-detail/:id' , component: TicketDetailComponent, canActivate: [AuthGuard] },
-  { path: 'summary' , component: SummaryComponent, canActivate: [AuthGuard] }
+  { path: 'summary' , component: SummaryComponent, canActivate: [AuthGuard] },
+  { path: 'debito-financeiro' , component: DebitoFinanceiroComponent, canActivate: [AuthGuard] }
 ]
 
 export const routes: ModuleWithProviders = RouterModule.forRoot(ROUTES);
